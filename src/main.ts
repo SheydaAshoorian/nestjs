@@ -17,6 +17,8 @@ async function bootstrap() {
 
   const document = SwaggerModule.createDocument(app, config);
 
+  app.enableCors(); // Give access to nextjs
+
   SwaggerModule.setup('api', app, document);
 
   await app.listen(3000);

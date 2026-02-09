@@ -6,7 +6,7 @@ import { CreateTaskDto } from './dto/create-task.dto';
 import { UpdateTaskDto } from './dto/update-task.dto';
 
 @Injectable()
-export class TasksService { // حتما کلمه export باید باشد
+export class TasksService { 
   constructor(
     @InjectRepository(Task)
     private taskRepository: Repository<Task>,

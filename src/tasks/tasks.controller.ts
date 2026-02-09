@@ -4,7 +4,7 @@ import { CreateTaskDto } from './dto/create-task.dto';
 import { UpdateTaskDto } from './dto/update-task.dto';
 
 @Controller('tasks')
-export class TasksController {
+export class TasksController { // حتما export باشد
   constructor(private readonly tasksService: TasksService) {}
 
   @Post()
@@ -15,11 +15,6 @@ export class TasksController {
   @Get()
   findAll() {
     return this.tasksService.findAll();
-  }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.tasksService.findOne(+id);
   }
 
   @Patch(':id')

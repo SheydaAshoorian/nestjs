@@ -13,7 +13,7 @@ export class Task {
     @Column({ nullable: true})
     description: string;
 
-    @column({default: 'OPEN'})
+    @Column({default: 'OPEN'})
     status: string;
 
     @CreateDateColumn()
